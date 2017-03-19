@@ -269,9 +269,36 @@ video {
 	.portfolio-navbar {
 		display: flex;
 		flex-direction: row;
+		margin-top: 2vw;
+		margin-bottom: 1vw;
 	}
 	
 	.specific-page-selector {
 		margin: 1vw;
+	}
+
+	.specific-content {
+		height: 100%;
+		width: 87.5vw;
+		overflow: scroll;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: flex-start;
+		padding: 0vw;
+	}
+	
+	.portfolio-item {
+		margin: 0 2vw 4vw 2vw;
+	}
+
+	.thumbnail {
+		height: 15vw;
+		width: 15vw;
+		background: white;
+	}
+
+	.item-title {
+		display: none;
 	}
 }
