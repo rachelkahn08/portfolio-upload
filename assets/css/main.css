@@ -295,6 +295,21 @@ video {
 	.thumbnail {
 		height: 15vw;
 		width: 15vw;
+	}
+	
+	.design {
+		background: red;
+	}
+
+	.development {
+		background: blue;
+	}
+
+	.programming {
+		background: green;
+	}
+
+	.animation {
 		background: white;
 	}
 
