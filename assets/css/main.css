@@ -1,0 +1,277 @@
+
+@font-face {
+	font-family: uni sans;
+	src: url(../fonts/unisans/uni-sans-thin.otf);
+}
+
+
+* {
+  box-sizing: border-box; 
+}
+
+html, body {
+	height: 100%;
+	width: 100%;
+	color: #dfeff4;
+}
+
+body {
+	background: #090c0d;
+	font-family: uni sans;
+}
+
+video {
+	margin: 0 auto;
+    width: 310vw;
+    position: fixed;
+    z-index: 1;
+    transform: rotate(90deg) translateY(115vw);
+}
+
+.italic {
+	font-style: italic;
+}
+
+.bold {
+	font-weight: 700;
+}
+
+.jadetext {
+	color: #568491;
+}
+
+.purpletext {
+	color: #7d609d;
+}
+
+.navbar, .logo-and-titles {
+	z-index: 2;
+}
+
+.nav {
+	display: none;
+}
+
+.logo-and-titles {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: wrap;
+	background-color: rgba(11, 13, 13, 0.8);
+	padding: 4vw;
+	border-bottom: 2vw solid #084457;
+}
+
+.hamburger-container {
+	align-self: flex-end;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 13.5vw;
+}
+
+.hamburger-bar {
+	height: 2vw;
+	background-color: rgba(125, 96, 157, 0.9);
+	margin: 0.75vw;
+}
+
+.logo {
+	background-image: url("../img/logo.svg");
+	height: 31.25vw;
+	width: 24.5vw;
+	background-repeat: no-repeat;
+	margin-bottom: 7.8125vw;
+}
+
+.name {
+	align-self: flex-start;
+	letter-spacing: 0.08rem;
+	font-size: 5vw;
+	width: 50%;
+	text-align: right;
+	padding-right: 1vw;
+}
+
+.titles {
+	margin-top: 4vw;
+	font-size: 4vw;
+	letter-spacing: 0.06rem;
+	width: 50%;
+	align-self: flex-end;
+}
+
+.titles p {
+	margin-bottom: 4vw;
+}
+
+
+
+@media screen and (min-width: 600px) {
+
+/********* BACKGROUND AND RESETS *********/
+	
+	video {
+		transform: none;
+		max-height: 100%;
+		min-width: 100%;
+		margin-left: -105%;
+	}
+
+	.hamburger-container {
+		display:none;
+	}
+
+	.nav {
+		display: flex;
+	}
+
+	.logo {
+		margin: 0;
+		transform: none;
+	}
+
+	.landing-page .hamburger-container,
+	.specific-pages .copy,
+	.landing-page .specific-page-content {
+		display: none;
+	}
+
+	.logo-and-titles {
+		background: none;
+		padding: 0;
+		border: none;
+		margin: 0;
+	}
+
+	.navlink {
+		display: flex;
+		flex-direction: row;
+	}
+
+
+/********* LANDING PAGE *********/
+
+	.landing-page {
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+
+	.landing-page .logo-and-titles {
+		align-self: flex-end;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding-left: 7vw;
+		padding-bottom: 4vw;
+	}
+
+	.landing-page .logo {
+		height: 15.625vw;
+		width: 12.5vw;
+		align-self: flex-start;
+	}	
+
+	.landing-page .name, .titles {
+		font-size: 1.388888889vw;
+		width: initial;
+		margin: 0;
+	}
+
+	.landing-page .titles {
+		margin-left: 8vw;
+	}
+
+	.landing-page .titles p {
+		margin-bottom: 0;
+		margin-top: 1vw;
+	}
+	
+	.landing-page .copy {
+		display: flex;
+		flex-direction: column;
+		align-self: flex-end;
+		transform: translate(-25%);
+		margin-bottom: 0.5vw;
+	}
+
+	 .landing-page .nav {
+	 	z-index: 2;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		height: 100%;
+		background: linear-gradient(to left, rgba(9,12,13,1) 
+			0%, rgba(9, 12, 13, 0.2)
+			50%, rgba(9, 12, 13, 0.1)
+			80%, rgba(9, 12, 13, 0)
+			100%, rgba(9, 12, 13, 0));
+	}
+
+	.landing-page .navbar {
+		display: flex;
+		height: 100%;
+		text-align: center;
+		font-size: 2vw;
+	}
+
+	.landing-page .navlink {
+		justify-content: space-between;
+		width: 10vw;
+		margin: 3vw;
+	}
+	
+	
+/********* INDIVIDUAL PAGES *********/
+	
+	.specific-pages {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+	}
+
+	.specific-pages .logo {
+		height: 7vw;
+		width: 5.5vw;
+		margin: 3vw;
+	}
+
+	.specific-pages .nav {
+		flex-direction: column-reverse;
+		justify-content: flex-end;
+		align-items: center;
+		height: 100%;
+		width: 12.5vw;
+	}
+
+	.specific-pages .navlink {
+		margin-bottom: 2.5vw;
+	}
+
+	.specific-page-content {
+		z-index: 3;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 100%;
+		width: 87.5vw;
+		background-color: rgba(11, 13, 13, 0.8);
+	}
+
+	.specific-page-header {
+		display: flex;
+		flex-direction: row;
+		font-size: 3.5vw;
+		margin-top: 5vw;
+	}
+
+	.portfolio-navbar {
+		display: flex;
+		flex-direction: row;
+	}
+	
+	.specific-page-selector {
+		margin: 1vw;
+	}
+}
