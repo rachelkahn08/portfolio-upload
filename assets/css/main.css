@@ -105,6 +105,9 @@ video {
 	margin-bottom: 4vw;
 }
 
+.hidden {
+	display: none;
+}
 
 
 @media screen and (min-width: 600px) {
@@ -133,8 +136,12 @@ video {
 
 	.landing-page .hamburger-container,
 	.specific-pages .copy,
-	.landing-page .specific-page-content {
+	.specific-pages {
 		display: none;
+	}
+
+	.landing-page{
+		display: flex;
 	}
 
 	.logo-and-titles {
@@ -155,7 +162,6 @@ video {
 	.landing-page {
 		height: 100%;
 		width: 100%;
-		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
 	}
@@ -226,7 +232,6 @@ video {
 /********* INDIVIDUAL PAGES *********/
 	
 	.specific-pages {
-		display: flex;
 		flex-direction: row;
 		justify-content: flex-start;
 	}
@@ -250,11 +255,11 @@ video {
 	}
 
 	.specific-page-content {
-		z-index: 3;
 		display: flex;
+		z-index: 3;
 		flex-direction: column;
 		align-items: center;
-		height: 100%;
+		height: 100vh;
 		width: 87.5vw;
 		background-color: rgba(11, 13, 13, 0.8);
 	}
@@ -278,9 +283,9 @@ video {
 	}
 
 	.specific-content {
+		z-index: 10;
 		height: 100%;
 		width: 87.5vw;
-		overflow: scroll;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
@@ -288,32 +293,38 @@ video {
 		padding: 0vw;
 	}
 	
+	.portfolio-content {
+		overflow: scroll;
+		width: 70vw;
+	}
+
+	.portfolio-content::-webkit-scrollbar {
+		display: none;
+	}
+
 	.portfolio-item {
-		margin: 0 2vw 4vw 2vw;
+		z-index: 10;
+		margin: 2vw 2vw;
+		padding-bottom: 3vw;
 	}
 
 	.thumbnail {
-		height: 15vw;
-		width: 15vw;
-	}
-	
-	.design {
-		background: red;
-	}
-
-	.development {
-		background: blue;
-	}
-
-	.programming {
-		background: green;
-	}
-
-	.animation {
-		background: white;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		height: 25vw;
+		width: 25vw;
+		background-size: cover;
+		filter: grayscale(85%);
 	}
 
 	.item-title {
-		display: none;
+		position: absolute;
+		width: 25vw;
+		font-weight: 700;
+		font-size: 2vw;
+		text-align: center;
+		transform: translateY(100%);
 	}
+	
 }
