@@ -28,6 +28,11 @@ video {
     transform: rotate(90deg) translateY(130vw) translateX(-20vw);
 }
 
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
 .italic {
 	font-style: italic;
 }
@@ -556,7 +561,7 @@ video {
 
 	.item-title {
 		display: inherit;
-		position: absolute;
+		position: initial;
 		width: 25vw;
 		font-weight: 700;
 		font-size: 2vw;

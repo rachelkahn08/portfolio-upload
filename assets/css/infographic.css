@@ -1,0 +1,1108 @@
+
+* {
+  box-sizing: border-box; 
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	background-color: #b8f0f4;
+	color: #0b132b;
+}
+
+section {
+	width: 100%;
+}
+
+
+
+/********** DISPLAY AND POSITION STYLING ***********/
+
+.section-one,
+.section-two,
+.section-three,
+.section-four,
+.section-five,
+.col-one-fifth,
+.col-two-fifths,
+.mobile-device-group,
+.col-three-fifths,
+.device-container,
+.computer,
+.computer-medium,
+.mobile,
+.mobile-medium,
+.col-one-half,
+.section-four-content,
+.speech-bubble,
+.section-four-bottom-banner,
+.section-five-header,
+.ken-animations-one,
+footer,
+.journey-bubble,
+.liz,
+.liz-arm-container,
+.ken,
+.ken-arm-container,
+.ken-running {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.section-one,
+.section-two,
+.section-three,
+.speech-bubble,
+.journey-bubble,
+.device-container,
+.col-one-fifth,
+.col-two-fifths,
+.mobile-device-group,
+.col-three-fifths,
+.col-one-half,
+.section-four-content,
+.section-four-bottom-banner {
+	align-items: center;
+}
+
+.section-one,
+.section-two,
+.full-across,
+.speech-bubble,
+.journey-bubble,
+.device-container,
+.mobile-device-group,
+.section-five-header,
+.liz,
+.ken {
+	justify-content: center;
+}
+
+.section-three {	
+	justify-content: space-around;
+}
+
+.section-two,
+.col-three-fifths,
+.col-one-fifth,
+.col-two-fifths,
+.section-four-content,
+.liz-arm-container,
+.ken-arm-container {
+	flex-direction: column;
+}
+
+.right {
+	flex-direction: row-reverse;
+}
+
+.mobile-screen-dark,
+.mobile-screen-light,
+.mobile-body-large,
+.mobile-screen-dark-medium,
+.mobile-screen-light-medium,
+.mobile-body-medium,
+.laptop-screen-light,
+.laptop-screen-dark,
+.laptop-screen-light-medium,
+.laptop-screen-dark-medium,
+.globe-large,
+.globe-medium,
+.tablet-body,
+.tablet-screen-dark,
+.tablet-screen-light {
+	position: absolute;
+}
+
+.laptop-screen-light,
+.laptop-screen-dark,
+.laptop-screen-light-medium,
+.laptop-screen-dark-medium,
+.laptop-globe-large,
+.laptop-globe-medium,
+.mobile-medium {
+	align-self: flex-start;
+}
+
+.col-two-fifths,
+.mobile-device-group {
+	align-self: flex-end;
+}
+
+
+/**********FONT SIZES, COLORS, BACKGROUND COLORS**********/
+.white {
+	color: #f8ffff;
+}
+
+.grey {
+	color: #3a506b;	
+}
+
+.light-teal {
+	color: #b8f0f4;
+}
+
+.dark-teal {
+	color: #5bc0be;
+}
+
+.aller-xl {
+	font-size: 12.5vw;
+}
+
+.aller-large {
+	font-size: 6.25vw;
+}
+
+.aller-medium {
+	font-size: 5.902777778vw;
+}
+
+.aller-small {
+	font-size: 4.166666667vw;
+}
+
+.aller-xxs {
+	font-size: 1.875vw;
+}
+
+.aller-xs,
+.refrigerator-small {
+	font-size: 2.930556vw;
+}
+
+.refrigerator-medium {
+	font-size: 2.222222222vw;
+}
+
+.refrigerator-large,
+.aller {
+	font-size: 3.7vw;
+}
+
+.speech-bubble p {
+	font-size: 1.944444444vw;
+	line-height: 3.125vw;
+}
+
+.col-one-fifth p,
+.col-two-fifths p,
+.speech-bubble p,
+.section-five-header,
+.journey-bubble {
+	text-align: center;
+}
+
+.section-one, 
+.speech-bubble,
+.section-four-bottom-banner,
+footer {
+	background-color: #0b132b;
+}
+
+.section-two,
+.laptop-screen-light,
+.laptop-screen-light-medium,
+.mobile-screen-dark,
+.mobile-screen-dark-medium,
+.tablet-screen-dark {
+	background-color: #3a506b;
+}
+
+.mobile-screen-light,
+.mobile-screen-light-medium,
+.tablet-screen-light,
+.section-four-content, 
+.ken-animations-two {
+	background-color: #5bc0be;
+}
+
+/**********SIZES, SHAPES, MARGINS**********/
+
+.section-one {
+	height: 25.69444444vw;
+}
+
+.section-two {
+	height: 17.36111111vw;
+}
+
+.section-three {
+	margin-bottom: 10vw;
+}
+
+.section-four {
+	margin-top: 3.055555556vw;
+}
+
+.col-one-fifth,
+.col-two-fifths {
+	margin: 0.3472222222vw;		
+	align-self: flex-end;
+}
+
+.col-one-fifth p,
+.col-two-fifths p {
+	margin: 0.3472222222vw;
+}
+
+.col-one-fifth {
+	width: 18vw;
+}
+
+.col-two-fifths {
+	width: 20vw;
+}
+
+.device-container {
+	margin-bottom: 2vw;
+}
+
+.far-right,
+.mobile-device-group {
+	width: 40vw;
+}
+
+.col-three-fifths {
+	width: 100%;
+	margin-bottom: 3.055555556vw;
+}
+
+.col-one-half {
+	width: 48.1944444412vw;
+	justify-content: flex-end;
+	margin: 0.61vw;
+}
+
+.speech-bubble {
+	height: 15.97222222vw;
+	width: 15.97222222vw;
+	border-radius: 50%;
+	padding: 1.736111111vw;
+	align-self: flex-start;
+}
+
+.section-four-content {
+	z-index: 20;
+	width: 42.22222222vw;
+	border-bottom: .6944444444vw solid #0b132b;
+	justify-content: flex-end;
+	padding-top: 1.944444444vw;
+	padding-bottom: 1.944444444vw;
+}
+
+.section-four-bottom-banner {
+	width: 95.69444444vw;
+	height: 10.41666667vw;
+	margin-left: 2.15277778vw;
+}
+
+.section-five-header {
+	padding: 2.083333333vw;
+	margin-bottom: 3vw;
+}
+
+.ken-animations-two {
+	width: 100%;
+}
+
+.ken-animations-two p {
+	width: 56vw;
+	text-align: right;
+	line-height: 5vw;
+	margin: 10vw;
+	margin-bottom: 16vw;
+}
+
+.journey-bubble {
+	border-radius: 1.388888888889vw;
+	background-color: #f8ffff;
+	width: 15.625vw;
+	transform: translateY(-1.041666667vw);
+}
+
+footer {
+	justify-content: space-around;
+	height: 8.680555556vw;
+}
+
+/**********IMAGES AND FIGURES**********/
+
+figure {
+	background-size: 100% 100%;
+}
+
+.mobile-body-large,
+.mobile-body-medium {
+	background-image: url("../img/mobile-body.svg");
+}
+
+.globe-large,
+.globe-medium {
+	background-image: url("../img/globe.svg");
+}
+
+.laptop-body,
+.laptop-body-medium { 
+	background-image: url("../img/laptop-body.svg");
+}
+
+.laptop-screen-frame,
+.laptop-screen-frame-medium {
+	background-image: url("../img/laptop-screen-frame.png");
+}
+
+.tablet-body {
+	background-image: url("../img/tablet-body.svg");
+}
+
+.upper-arm {
+	z-index: -1;
+}
+
+.mobile-screen-dark-medium,
+.mobile-screen-dark,
+.laptop-screen-dark,
+.laptop-screen-dark-medium,
+.tablet-screen-dark,
+.liz-torso,
+.ken-torso {
+	z-index: 2;
+}
+
+.mobile-screen-light-medium,
+.mobile-screen-light,
+.laptop-screen-light,
+.laptop-screen-light-medium,
+.tablet-screen-light,
+.liz-arm-container,
+.ken-arm-container {
+	z-index: 3;
+}
+
+
+.mobile-body-large,
+.mobile-body-medium,
+.laptop-screen-frame,
+.laptop-screen-frame-medium,
+.tablet-body,
+.liz-left-lower-arm,
+.liz-right-lower-arm,
+.ken-left-lower-arm,
+.ken-right-lower-arm {
+	z-index: 4;
+}
+
+.globe-small,
+.globe-medium,
+.globe-large {
+	z-index: 5;
+}
+
+.mobile-medium {
+	margin-top: 3vw;
+}
+
+.mobile-medium,
+.mobile-screen-light-medium,
+.mobile-screen-dark-medium,
+.mobile-body-medium  {
+	height: 12.01388889vw;
+	width: 6.25vw;
+}
+
+.mobile-large,
+.mobile-screen-light,
+.mobile-screen-dark {
+	border-bottom: 0.4vw solid #5bc0be;
+}
+
+.mobile-large,
+.mobile-screen-dark,
+.mobile-screen-light,
+.mobile-body-large {
+	height: 24.30555556vw;
+	width: 12.84722222vw;
+}
+
+.tablet {
+	margin-left: 2.15vw;
+}
+
+.tablet,
+.tablet-screen-dark,
+.tablet-screen-light,
+.tablet-body {
+	height: 12.1vw;
+	width: 18.9vw;
+}
+
+.globe-large {
+	height: 7.291666667vw;
+	width: 7.291666667vw;
+}
+
+.globe-medium {
+	height: 6.736111111vw;
+	width: 6.736111111vw;
+}
+
+.laptop-screen-frame,
+.laptop-screen-light,
+.laptop-screen-dark, 
+.computer {
+	width: 29.16666667vw;
+}
+
+.laptop-screen-frame-medium,
+.laptop-screen-light-medium,
+.laptop-screen-dark-medium, 
+.computer-medium,
+.laptop-body-medium {
+	width: 25.90277778vw;
+}
+
+.laptop-screen-frame-medium,
+.laptop-screen-light-medium,
+.laptop-screen-dark-medium {
+	height: 14.09722222vw;
+}
+
+.laptop-screen-frame,
+.laptop-screen-light,
+.laptop-screen-dark {
+	height: 17.08333333vw;
+}
+
+.laptop-body {
+	height: 11.6vw;
+	width: 29.16666667vw;
+}
+
+.laptop-body-medium {
+	height: 10.41666667vw;	
+}
+
+.laptop-globe-large {
+	margin-top: 4.861111111vw;
+}
+
+.laptop-globe-medium {
+	margin-top: 4.027777778vw;
+}
+
+.mobile-device-group {
+	margin-top: 0.736111111vw
+}
+
+.stopwatch {
+	height: 7.291666667vw;
+	width: 6.527777778vw;
+	background-image: url("../img/stopwatch.svg");
+	margin: 0vw 6.5vw 0vw 2vw;
+}
+
+/********** LIZ **********/
+
+.liz-torso {
+	background-image: url("../img/liz-torso.svg");
+	height: 27.08333333vw;
+	width: 10.51666667vw;
+	margin: 0 -2.2vw;
+}
+
+.liz-arm-container {
+	margin: 2.7vw -0.6vw 0 -0.4vw;
+}
+
+.liz-left-arm {
+	transform: rotate(10deg) translate(-0.1vw, 0.1vw);
+	transform-origin: center 4.5%;
+}
+
+.liz-right-arm {
+	transform: rotate(-55deg) translate(0.25vw, 0.35vw);
+    transform-origin: center 4.5%;
+}
+
+.liz-upper-arm {
+	background-image: url("../img/liz-upper-arm.svg");
+	height: 8.927778vw;
+	width: 1.944444444vw;
+}
+
+.liz-right-lower-arm,
+.liz-left-lower-arm {
+	height: 7.8vw;
+    width: 2.222222222vw;
+    margin-top: -1.6vw;
+}
+
+.liz-left-lower-arm {
+	background-image: url("../img/liz-left-lower-arm.svg");
+	transform: translate(-0.29vw, -0.3vw) rotate(114deg);
+    transform-origin: 54% 12%;
+}
+
+
+.liz-right-lower-arm {
+	background-image: url("../img/liz-right-lower-arm.svg");
+	transform: translate(-0.1vw, -0.15vw) rotate(94deg);
+	transform-origin: center 10%;
+}
+
+.liz-lapels {
+	position: absolute;
+	background-image: url("../img/liz-lapels.svg");
+	width: 10.51666667vw;
+	height: 10.8vw;
+	z-index: 7;
+}
+
+.liz-right-hand-fist {
+	background-image: url("../img/liz-right-hand-fist.svg");	
+	height: 3.2vw;
+    width: 2.6vw;
+    margin-top: 7.6vw;
+    transform: translate(-0.4vw, 0vw) rotate(-1.2deg);
+    z-index: -1;
+}
+
+.liz-left-hand-phone {
+	background-image: url("../img/liz-left-hand-phone.svg");	
+	height: 6.2vw;
+    width: 7.6vw;
+    transform: translate(-10.1vw, 0.1vw) rotate(-10deg);
+    position: absolute;
+    z-index: 1;
+    transform-origin: bottom right;
+}
+
+.liz-head {
+	position: absolute;
+	margin-top: -7vw;
+    margin-left: 0.3vw;
+    z-index: 8;
+}
+
+.liz-head-outline {
+	background-image: url("../img/liz-head-outline.svg");	
+	height: 8.3vw;
+    width: 6.4vw;
+}
+
+.liz-hair {
+    background-image: url(../img/liz-hair.svg);
+    height: 9.4vw;
+    width: 10.5vw;
+    position: absolute;
+    margin-top: -9.8vw;
+    margin-left: -3vw;
+    z-index: 9;
+}
+
+.liz-face {
+	position: absolute;
+	transform: translate(0.2vw, -5.9vw);
+}
+
+.liz-eyes {
+	background-image: url(../img/liz-eyes.svg);
+	height: 3.2vw;
+    width: 5.2vw;
+}
+
+.liz-pupils {
+	position: absolute;
+    background-image: url(../img/liz-pupils.svg);
+    height: 1.5vw;
+    width: 3.1vw;
+    transform: translate(0.65vw, 0.9vw) rotate(0deg);
+}
+
+.liz-eyebrow {
+	position: absolute;
+    background-image: url(../img/liz-eyebrow.svg);	
+   	height: 0.8vw;
+    width: 1.85vw;
+    margin-left: 3.3vw;
+    transform: translate(0vw, -0.2vw) rotate(0deg);
+}
+
+.liz-nose {
+	position: absolute;
+    background-image: url(../img/liz-nose.svg);	
+   	height: 2.2vw;
+    width: 0.95vw;
+    margin-left: 2.5vw;
+    transform: translate(0vw, -2.2vw) rotate(0deg);
+    transform-origin: right center;
+}
+
+.liz-mouth {
+	position: absolute;
+    background-image: url(../img/liz-mouth-one.svg);
+    margin-left: 1.2vw;
+    transform: translate(0vw, -0.3vw) rotate(0deg);
+    height: 2vw;
+    width: 2.6vw;
+}
+
+.liz-mouth-computer {
+	position: absolute;
+    background-image: url(../img/liz-mouth-computer.svg);
+    margin-left: 1.2vw;
+    transform: translate(0.8vw, -0.4vw) rotate(-7deg);
+    height: 2.8vw;
+    width: 2.1vw;
+}
+
+.liz-sitting {
+	z-index: 0;
+	transform: translate(-8vw, 11.3vw);
+}
+
+.liz-sitting .right-arm {
+	transform: rotate(-49deg) translate(0.2vw, 0.1vw);
+}
+
+.liz-sitting .left-arm {
+	transform: rotate(44deg) translate(-0.1vw, 0.2vw);
+}
+
+.liz-sitting .liz-left-lower-arm {
+	transform: translate(-0.29vw, -0.3vw) rotate(94deg);
+}
+
+.liz-sitting .liz-right-lower-arm {
+	transform: translate(-0.1vw, -0.15vw) rotate(94deg);
+}
+
+.liz-left-hand, 
+.liz-right-hand {
+	height: 2vw;
+	width: 2vw;
+}
+
+.liz-left-hand {
+	background-image: url("../img/liz-left-hand.svg");
+}
+
+.liz-right-hand {
+	background-image: url("../img/liz-right-hand.svg");
+}
+
+.liz-sitting .liz-pupils {
+	position: absolute;
+    background-image: url(../img/liz-pupils.svg);
+    height: 2vw;
+    width: 2.6vw;
+    transform: translate(1.25vw, 0.9vw) rotate(0deg);
+}
+
+.liz-sitting .liz-eyebrow {
+	position: absolute;
+    background-image: url(../img/liz-eyebrow.svg);	
+   	height: 0.8vw;
+    width: 1.85vw;
+    margin-left: 3.3vw;
+    transform: translate(0vw, -0.2vw) rotate(0deg);
+}
+
+.liz-sitting .liz-mouth {
+	position: absolute;
+    background-image: url(../img/liz-mouth-one.svg);
+    margin-left: 1.2vw;
+    transform: translate(0vw, -0.3vw) rotate(0deg);
+    height: 2vw;
+    width: 2.6vw;
+}
+
+.laptop-back {
+	position: absolute;
+	background-image: url("../img/laptop-back.svg");
+	width: 14.44444444vw;
+	height: 12.5vw;
+	z-index: 12;
+	margin-top: 4.7vw;
+}
+
+.liz-standing {
+	transform: translate(-5vw, 7vw);
+}
+
+.left .speech-bubble {
+	transform: translate(-3vw, -6vw);
+}
+
+.right .speech-bubble {
+	transform: translate(20vw, 0vw);
+}
+
+.liz-computer-gesture {
+	display: inline;
+	transform: rotate(90deg);
+	transform: translate(-0.29vw, 0.21vw) rotate(8deg);
+	transform-origin: center 4.5%;
+}
+
+.liz-computer-left-lower-arm {
+	transform: translate(-0.29vw, -0.3vw) rotate(280deg);	
+	background-image: url("../img/liz-left-lower-arm.svg");
+	height: 7.8vw;
+    width: 2.222222222vw;
+    margin: -1.4vw 0vw 0vw 0vw;
+    transform-origin: 54% 12%;
+}
+
+.liz-computer-gesture-hand {
+	position: absolute;
+	background-image: url("../img/liz-computer-gesture-hand.svg");	
+	height: 5.5vw;
+    width: 2.6vw;
+    margin: 7.25vw 0vw 0vw 0vw;
+    transform: translate(0vw, 0vw) rotate(-36.4deg);
+    transform-origin: top center;
+}
+
+
+/********** KEN ANIMATIONS 1 **********/
+
+.ken-animations-one {
+	width: 100%;
+	justify-content: center;
+}
+
+.ken-animations-one .ken {
+	margin: 0 10vw;
+	transform: translateY(0.5vw);
+	z-index: -1;
+}
+
+.ken-torso {
+	background-image: url("../img/ken-torso.svg");
+	height: 18.4vw;
+	width: 11.78571429vw;
+	background-repeat: no-repeat;
+}
+
+.ken-arm-container {
+	margin: 1.92vw -2.82vw 0vw -2.82vw;
+}
+
+.ken-upper-arm {
+	background-image: url(../img/ken-upper-arm.svg);
+    height: 9.663889vw;
+    width: 1.922222vw;
+}
+
+.ken-left-lower-arm,
+.ken-right-lower-arm {
+	height: 8.463889vw;
+    width: 1.922222vw;
+    z-index: 3;
+}
+
+.ken-shoulders {
+	position: absolute;
+    background-image: url(../img/ken-shoulders.svg);
+    height: 16.6vw;
+    width: 12vw;
+    background-repeat: no-repeat;
+    z-index: 5;
+    transform: translate(0vw, 1.759vw);
+}
+
+.ken-head {
+	position: absolute;
+	z-index: 8;
+	margin-top: -6.8vw;
+}
+
+.ken-face {
+	background-image: url(../img/ken-head.svg);
+    height: 8vw;
+    width: 5vw;
+    background-repeat: no-repeat;
+}
+
+.ken-hair {
+	position: absolute;
+    background-image: url(../img/ken-hair.svg);
+    height: 6.6vw;
+    width: 7.4vw;
+    background-repeat: no-repeat;
+    margin: -9.4vw 0vw 0vw -1.4vw;
+}
+
+.ken-glasses {
+	position: absolute;
+    background-image: url(../img/ken-glasses.svg);
+    height: 3vw;
+    width: 4.8vw;
+    background-repeat: no-repeat;
+    margin: -6.2vw 0vw 0vw 0.1vw;
+}
+
+.ken-eyebrows {
+	position: absolute;
+    background-image: url(../img/ken-eyebrows.svg);
+    height: 1.2vw;
+    width: 4.8vw;
+    background-repeat: no-repeat;
+    margin: -6.2vw 0vw 0vw 0.1vw;
+}
+
+.ken-nose {
+	position: absolute;
+    background-image: url(../img/ken-nose.svg);
+    height: 3.5vw;
+    width: 2.6vw;
+    background-repeat: no-repeat;
+    margin: -5.95vw 0vw 0vw 1.1vw;
+}
+
+.ken-pupils {
+	position: absolute;
+    background-image: url(../img/ken-pupils.svg);
+    height: 0.8vw;
+    width: 2.7vw;
+    background-repeat: no-repeat;
+    margin: 1.5vw 0vw 0vw 1.1vw;
+}
+
+.ken-mouth {
+	position: absolute;
+    background-image: url(../img/ken-mouth.svg);
+    height: 1.5vw;
+    width: 2.2vw;
+    background-repeat: no-repeat;
+    margin: -2.25vw 0vw 0vw 1.35vw;
+}
+
+
+/********** KEN STANDING **********/
+
+.ken-standing .ken-left-arm {
+	transform: rotate(30deg);
+    transform-origin: center 4.5%;
+}
+
+.ken-standing .ken-right-arm {
+	transform: rotate(-30deg);
+    transform-origin: center 4.5%;
+}
+
+
+.ken-standing .ken-right-lower-arm {
+	background-image: url(../img/ken-left-lower-arm.svg);
+    margin: -1.8vw 0vw 0vw 0vw;
+    transform: rotate(150deg);
+    transform-origin: center 9%;
+}
+
+
+.ken-standing .ken-left-lower-arm {
+	background-image: url(../img/ken-right-lower-arm.svg);
+    margin: -1.8vw 0vw 0vw 0vw;
+    transform: rotate(150deg);
+    transform-origin: center 9%;
+}
+
+
+.ken-standing .ken-hand-phone {
+  	background-image: url(../img/ken-hand-phone.svg);
+    height: 5vw;
+    width: 6vw;
+    background-repeat: no-repeat;
+    margin: 7.95vw 0vw 0vw -2.8vw;
+    z-index: -1;
+    transform: rotate(8deg);
+    transform-origin: top center;
+}
+
+.ken-standing .ken-left-hand-point {
+  	background-image: url(../img/ken-left-hand-point.svg);
+    height: 5vw;
+    width: 6vw;
+    background-repeat: no-repeat;
+    margin: 8.1vw 0vw 0vw -2.3vw;
+    z-index: -1;
+    transform: rotate(-0.1deg);
+    transform-origin: top center;
+}
+
+/********** KEN SITTING **********/
+
+.ken-sitting .ken-left-arm {
+	transform: rotate(40deg);
+    transform-origin: center 4.5%;
+}
+
+.ken-sitting .ken-right-arm {
+	transform: rotate(-40deg);
+    transform-origin: center 4.5%;
+}
+
+
+.ken-sitting .ken-right-lower-arm {
+	background-image: url(../img/ken-left-lower-arm.svg);
+    margin: -1.8vw 0vw 0vw 0vw;
+    transform: rotate(130deg);
+    transform-origin: center 9%;
+}
+
+
+.ken-sitting .ken-left-lower-arm {
+	background-image: url(../img/ken-right-lower-arm.svg);
+    margin: -1.8vw 0vw 0vw 0vw;
+    transform: rotate(-130deg);
+    transform-origin: center 9%;
+}
+
+.ken-sitting .laptop-back {
+	margin-top: 0.7vw;
+}
+
+/********** KEN ANIMATIONS 2 **********/
+
+.ken-running {
+	position: absolute;
+	justify-content: center;
+	margin-top: 8.5vw;
+	margin-left: -10vw;
+}
+
+.ken-running-torso {
+	position: absolute;
+	background-image: url("../img/ken-running-torso.svg");
+	height: 18.4vw;
+	width: 11.78571429vw;
+}
+
+.ken-running-leg-container {
+	z-index: 0;
+	position: absolute;
+	margin-top: 17.5vw;
+	margin-left: 1.25vw;
+	transform-origin: top center;
+}
+
+.ken-running-leg {
+	background-image: url(../img/ken-running-leg.svg);
+    height: 9vw;
+    width: 1.8vw;
+    margin-top: -1.3vw;
+}
+
+.calf {
+	background-image: url(../img/ken-running-calf.svg);
+    height: 9.9vw;
+    width: 1.7vw;
+    margin-top: -1.3vw;
+    margin-left: 0.19vw;
+    transform-origin: 35% 12%;
+}
+
+.background {
+	transform: rotate(30deg) translateY(-0.2vw);
+}
+
+.foreground {
+	transform: rotate(-30deg);
+}
+
+.background .calf {
+	transform: rotate(101deg);
+}
+
+.ken-shoe {
+	position: absolute;
+	height: 5vw;
+	width: 6vw;
+	margin: 7.95vw 0 0 0.19vw;
+    transform-origin: 0.45vw 1.4vw;
+}
+
+.ken-foreground-shoe {
+	background-image: url("../img/ken-running-foreground-shoe.svg");
+	transform: translate(0vw, 0vw) rotate(-17deg);
+}
+
+.ken-background-shoe {
+	background-image: url("../img/ken-running-background-shoe.svg");
+	transform: translate(0vw, 0vw) rotate(0deg);
+}
+
+.ken-running-arm {
+	position: absolute;
+}
+
+.foreground-arm {
+	z-index: 2;
+	transform-origin: 74% 6%;
+	height: 11.2vw;
+	width: 12.5vw;
+	margin: 8.1vw 0 0 -4.15vw;
+	background-image: url("../img/ken-running-foreground-arm.svg");
+	transform: translate(0vw, 0vw) rotate(-10deg);
+}
+
+.background-arm {
+	transform-origin: 56% 5%;
+	height: 10vw;
+	width: 11vw;
+	margin: 8.4vw 0 0 -.75vw;
+	background-image: url("../img/ken-running-background-arm.svg");
+	transform: translate(0vw, 0vw) rotate(-110deg);
+}
+
+
+
+/*
+.foreground-leg {
+	transform: rotate(26deg);
+}
+
+.foreground-calf {
+	transform: rotate(100deg) translate(-0.2vw, 0.1vw);
+}
+
+.background .calf {
+	transform: rotate(0deg);
+}
+
+.ken-running {
+	margin-top: 7.6vw;
+	margin-left: 35vw;
+}
+
+.ken-running-torso {
+	transform: rotate(35deg);
+    transform-origin: 4.8vw 8.8vw;
+}
+
+.ken-running-leg-container {
+	margin-left: -3.65vw;
+}
+
+.background-leg {
+	transform: rotate(-30deg) translateY(0.8vw);
+}
+
+.ken-background-shoe {
+	transform: rotate(15deg);
+}
+
+.ken-foreground-shoe {
+	transform: rotate(13deg);
+}*/
+
+
+/********** ANIMATIONS OMG **********/
+
+

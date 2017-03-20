@@ -1,0 +1,107 @@
+html, body {
+	background-color: #111;
+	width: 100%;
+	height: 100%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+#frame {
+	position:absolute;
+	width: 604px;
+	height: 404px;
+	top: 98px;
+	left: 98px;
+	border: 2px solid #999;
+    border-style: outset;
+	background-color: rgba(255, 255, 255, 0.5);
+	z-index: 0;
+}
+
+.directions-a {
+	position: relative;
+	top: -50px;
+	left: 50%;
+	transform: translate(-50%);
+	text-align: center;
+	color: white;
+}
+
+.directions-d {
+	position: relative;
+	top: 404px;
+	left: 50%;
+	transform: translate(-50%);
+	text-align: center;
+	color: white;
+}
+
+.piece {
+	z-index: 2;
+	position: absolute;
+}
+
+.modal {
+    position: absolute;
+    z-index:6;
+    left: 325px;
+    top: 150px;
+    background: transparent;
+    border: 2px solid #999;
+    border-style: outset;
+    width: 604px;
+	height: 404px;
+    font-family: "impact";
+    font-size: 40px;
+    text-align: center;
+    color: white;
+}
+
+.stopwatch {
+    position: absolute;
+    margin-left: 50%;
+    transform: translate(-50%);
+    margin-top: 20%;
+    z-index: 4;
+}
+
+.minutes, .seconds, .hundredths {
+    position: relative;
+    display: inline;
+    font-size: 3em;
+}
+
+.message {
+    position: relative;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%);
+    font-size:1.5em;
+}
+
+.button {
+    position: absolute;
+    margin-left: 50%;
+    bottom: 30px;
+    transform: translate(-50%);
+    border: 2px solid white;
+    border-style: outset;
+    padding: 20px;
+    background: rgba(28, 27, 24, 0.5);
+    font-size: 25px;
+    letter-spacing: 0.08em;
+}
+
+.good {
+	font-family: "impact";
+	position: absolute;
+	left: 335px;
+	top: 152px;
+	transform: translate(-25%);
+	text-align: center;
+	font-size: 100px;
+	color: white;
+	z-index: 4;
+}

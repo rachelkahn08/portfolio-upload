@@ -1,37 +1,34 @@
-console.log("Hello World from main.js!");
-
-// go get the buttons with the selectors 
-// add event listeners to each button
-// 	eventlistener function: 
-// 		get all items by tag
-// 		set display
-
 var portfolioContents = [
 	{
 		name: "apollo13",
 		title: "Apollo 13",
 		category: "animation",
 		thumbUrl: "url(assets/img/apollo13-thumb.png)",
+		destinationURL: "apollo13.html",
 	},
 	{
 		name: "mobilizeinfo",
 		title: "Mobilize Infographic",
 		category: "animation",
 		thumbUrl: "url(assets/img/infographic-thumb.png)",
+		destinationURL: "infographic.html",
 	},
 	{
 		name: "tidedotcom",
 		title: "Tide.com",
 		category: "design",
 		thumbUrl: "url(assets/img/tide-thumb.png)",
+		detailViewName: "tideItems",
 	},
 	{
 		name: "grumpypuzzle",
 		title: "Purrrrzle",
 		category: "programming",
 		thumbUrl: "url(assets/img/grumpycat-thumb.png)",
+		destinationURL: "grumpycat.html",
 	},
 ];
+
 
 function populateImages() {
 	var portfolioContainer = document.querySelector(".portfolio-content");
@@ -46,7 +43,7 @@ function populateImages() {
 			itemTitle.classList.add("item-title-nohover");
 			itemTitle.innerHTML = portfolioContents[i].title;
 
-		var portfolioItem = document.createElement("div");
+		var portfolioItem = document.createElement("a");
 			portfolioItem.classList.add("portfolio-item");
 			thumbImg.appendChild(itemTitle);
 			portfolioItem.appendChild(thumbImg);
@@ -56,6 +53,12 @@ function populateImages() {
 			portfolioItem.setAttribute("data-thumbUrl", portfolioContents[i].thumbUrl);
 			portfolioItem.addEventListener("mouseover", thumbHoverOn);
 			portfolioItem.addEventListener("mouseout", thumbHoverOff);
+			if (portfolioContents[i].destinationURL) {
+				portfolioItem.href = portfolioContents[i].destinationURL;
+			} else {
+				portfolioItem.addEventListener("click", openTideItemDetails);
+				portfolioItem.setAttribute("data-detail-view-name", portfolioContents[i].detailViewName);
+			}
 
 		portfolioContainer.appendChild(portfolioItem);
 		
@@ -69,7 +72,6 @@ function thumbHoverOn(e) {
 			e.currentTarget.appendChild(itemTitle);
 	e.currentTarget.childNodes[0].style.filter = "grayscale(0%)";
 	e.currentTarget.appendChild(itemTitle);
-	console.dir(e.currentTarget);
 }
 
 function thumbHoverOff(e) {
@@ -127,32 +129,67 @@ function addPortfolioButtonListeners() {
 	var allPortfolioButtons = document.querySelectorAll(".specific-page-selector");
 	for (var i = allPortfolioButtons.length - 1; i >= 0; i--) {
 		allPortfolioButtons[i].addEventListener("click", narrowByType);
-		console.log(allPortfolioButtons[i]);
 	}
 
 }	
+
+
+
+var tideItems = [
+	{
+		imgURL: "url(assets/img/tide-landing.mobile.png",
+		screenSize: "mobile",
+		compCategory: "Landing Page",
+		categoryID: "landing"
+	},
+	// {
+	// 	imgURL: "url(assets/img/.png",
+	// 	screenSize: "",
+	// 	compCategory: "",
+	// },
+];
+
+
+function openTideItemDetails(e) {
+	var everythingElse = document.querySelectorAll(".portfolio");
+		for (var i = everythingElse.length - 1; i >= 0; i--) {
+			everythingElse[i].childNodes[1].parentNode.style.display = "none";
+		}
+
+	var portfolioContent = document.querySelector(".portfolio-content");
+		portfolioContent.firstChild.parentNode.style.display = "none";
+
+	var projectHeader = document.querySelector(".specific-page-header");
+		projectHeader.innerHTML = e.currentTarget.dataset.title + "(&ensp;);";
+
+	var projectPage = document.createElement("div");
+
+	for (var i = tideItems.length - 1; i >= 0; i--) {		
+
+		var itemImage = document.createElement("figure");
+			itemImage.backgroundImage = tideItems[i].imgURL;
+			itemImage.classList.add(tideItems[i].screenSize)
+
+		var itemSize = document.createElement("div");
+			itemSize.classList.add("item-description");
+			itemSize.innerHTML = tideItems[i].screenSize;
+
+		var itemCategory = document.createElement("div");
+			itemCategory.classList.add("item-description");
+			itemCategory.innerHTML = tideItems[i].compCategory;
+
+		var projectItem = document.createElement("div");
+			projectItem.classList.add("project-item");
+			projectItem.appendChild(itemImage);
+			projectItem.appendChild(itemSize);
+			projectItem.appendChild(itemCategory);
+			projectItem.setAttribute("data-imgURL", tideItems[i].imgURL);
+			projectItem.setAttribute("data-screen-size", tideItems[i].screenSize);
+			projectItem.setAttribute("data-comp-category", tideItems[i].compCategory);
+			
+	}
 	
-	
-	
-
-
-// function addPortfolioButtonListeners() {
-// 	var allButton = document.querySelector(".all-link");
-// 	var animationButton = document.querySelector(".animation-link");
-// 	var designButton = document.querySelector(".web-design-link");
-// 	var developmentButton = document.querySelector(".development-link");
-// 	var programmingButton = document.querySelector(".programming-link");
-
-// 	// allButton.setEventListener("click", narrowByType)
-// 	// animationButton.setEventListener("click", narrowByType)
-// 	// designButton.setEventListener("click", narrowByType)
-// 	// developmentButton.setEventListener("click", narrowByType)
-// 	// programmingButton.setEventListener("click", narrowByType)
-
-// 	console.dir(allButton);
-
-
-// }
+}	
 
 window.addEventListener("load", setLoadListeners);
 

@@ -1,0 +1,269 @@
+html, body {
+	height:100%;
+	width: 100%;
+	background: black;
+	font-size: 16px;
+}
+
+* {
+	background-repeat: no-repeat;
+	background-size: 100%, 100%;
+	overflow: hidden;
+}
+
+.background {
+	position: relative;
+	left:50%;
+	top:50%;
+	width: 24.7222221em;
+	height: 37.027777em;
+	transform: translate(-50%, -50%);
+	background:#ede9dd;
+}
+
+.spacedude {
+	width:  0.6388888em;
+	height: 0.9444444em;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 3.6311111em;
+	z-index:6;
+	background-image: url(../img/spacedude.png);
+	animation: spacedude-orbit-X, spacedude-orbit-Y, spacedude-orbit-rotate;
+	animation-duration: 6.5s;
+	animation-iteration-count: 2;
+	animation-timing-function: ease-in-out;
+}
+
+.moon {
+	position: absolute;
+	width: 1em;
+	height: 1em;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 4.583333em;
+	position: absolute;
+	z-index:5;
+	background-image: url(../img/moon.png);
+}
+
+
+.earth-container {
+	position: absolute;
+	height: 16.555555em;
+	width: 16.555555em;
+	top: 13.77777em;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index:0;
+	border-radius: 50%;
+	border-style: none;
+	overflow: hidden;
+	background-color: #0d3043;
+}
+
+
+.planet {
+	position: relative;
+	height: 100%;
+	width: 100%
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index:1;
+	background-image: url(../img/planet.png);
+	background-repeat: no-repeat;
+	animation: planet-over 3s;
+}
+
+.rocket {
+	position: absolute;
+	transform: translateX(-50%);
+	width: 0.6944444em;
+	height: 10em;
+	left: 50.1%;
+	top: 4.861111em;
+	z-index:4;
+	background-image: url(../img/rocket.png);
+	animation: rocket-up 13s;
+}
+
+.exhaust {
+	position: absolute;
+	transform: translate(-50%, 0);
+	height: 8.25em;
+	width: 7.66em;
+	left: 50%;
+	top: 8.472222em;
+	z-index:3;
+	background-repeat: no-repeat;
+	background-image: url(../img/exhaust.png);
+	animation: exhaust-up 13s;
+
+}
+
+
+.skyline {
+	position: absolute;
+	left: 49%;
+	top: 11.416666em;
+	transform: translate(-50%);
+	height: 5.0277777em;
+	width: 12.611111em;
+	background-image: url(../img/skyline.png);
+	animation: skyline-up 6s;
+	z-index: 2;
+}
+
+
+
+.title {
+	width: 8em;
+	position: absolute;
+	z-index: 1;
+	left: 50%;
+	top: 33em;
+	transform: translateX(-50%);
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+   	font-weight:700;
+   	color:#071822;
+   	text-align: center;
+}
+
+h1 {
+	position: relative;
+	width: 100%;
+	padding-bottom: 0.44444444em;
+	margin-bottom: -1em;
+	font-size: 0.4444444em;
+	letter-spacing: .85em;
+	border-bottom: solid 0.013888em #071822;
+}
+
+p {
+	position: relative;
+	font-size: 0.25em;
+	display: inline;
+	letter-spacing: 3px;
+}
+
+#b {
+	margin-top: -1em;
+}
+
+@-webkit-keyframes skyline-up {
+	0% { top: 16.444444em; }
+	50% { top: 16.444444em; }
+	100% { top: 11.416666em; }
+}
+
+@-webkit-keyframes rocket-up {
+	0% { top: 100%; left: 50.1%; transform: translateX(-50%);}
+	55% { top: 100%; }
+	70% { top: 13.2em; }
+	72.9% { top: 13.2em; }
+	73% { transform: translate(-50%); }
+	76% { transform: translate(-50%); }
+	79% { transform: translate(-50%); }
+	82% { transform: translate(-50%); }
+	85% { transform: translate(-50%); }
+	88% { transform: translate(-50%); }
+	91% { transform: translate(-50%); }
+	94% { transform: translate(-50%); }
+	97% { transform: translate(-50%); }
+	100% { top: 4.8611111em; left:50.1%; transform: translateX(-50%);}
+}
+@-webkit-keyframes exhaust-up {
+	0% { 
+		top: 100%; 
+		transform: translate(-50% 0);
+		left: 50%;
+	}
+
+	73% { top: 100%; }
+	75% { transform: translate(-50%,  -1.5%); }
+	77% { transform: translate(-50%,  3.5%); }
+	79% { transform: translate(-50%, -1.5%); }
+	82% { transform: translate(-50%, 3.5%); }
+	85% { transform: translate(-50%,  -1.5%); }
+	89% { transform: translate(-50%, 3.5%); }
+	95% { transform: translate(-50%, -1.5%); }
+	100% { top: 8.4722222em; left: 50%; transform: translate(-50%, 0) rotateZ(0deg);}
+}
+
+@-webkit-keyframes planet-over {
+	0% { opacity: 0; transform: translateX(-150%); }
+	50% { opacity: .2;}
+	100% { opacity: 1; transform: translateX(-50%);}
+}
+
+@-webkit-keyframes spacedude-orbit-X {
+	/*
+		far left: 		3.11;
+		close left: 	11.19;
+		middle: 		12.40;
+		close right: 	13.61;
+		far right: 		21.69;
+	*/
+	0%, 100% {
+		left: 12.4em;
+	}
+
+	8% {
+		left: 13.61em;
+	}
+
+	29.5% {
+		left: 3.11em;
+	}
+
+	70.5% {
+		left: 21.69em;
+	}
+
+	92% {
+		left: 11.19em;
+	}
+
+}
+
+@-webkit-keyframes spacedude-orbit-Y {
+
+
+
+	0%, 100% {
+		top: 3.75em;
+	}
+
+	50% {
+		top: 31em;
+	}
+
+}
+
+@-webkit-keyframes spacedude-orbit-rotate {
+	0%, 100% {
+		transform: translateX(-50%);
+	}
+	
+	12.5% {
+		transform: translateX(-50%) rotateZ(135deg);
+	}
+
+	/*20% {
+		transform: translateX(-50%) rotateZ(110deg);
+	}
+	
+	80% {
+		transform: translateX(-50%) rotateZ(-110deg);
+	}
+*/
+	87.5% {
+		transform: translateX(-50%) rotateZ(-135deg);
+	}
+
+
+}
+
+
