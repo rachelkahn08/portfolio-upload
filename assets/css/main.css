@@ -25,7 +25,7 @@ video {
     width: 310vw;
     position: fixed;
     z-index: 1;
-    transform: rotate(90deg) translateY(115vw);
+    transform: rotate(90deg) translateY(130vw) translateX(-20vw);
 }
 
 .italic {
@@ -48,19 +48,7 @@ video {
 	z-index: 2;
 }
 
-.logo-and-titles {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	flex-wrap: wrap;
-	background-color: rgba(11, 13, 13, 0.8);
-	padding: 4vw;
-	border-bottom: 2vw solid #084457;
-	font-size: 3vw;
-}
-
 .hamburger-container {
-	align-self: flex-end;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -75,57 +63,41 @@ video {
 
 .logo {
 	background-image: url("../img/logo.svg");
-	height: 31.25vw;
-	width: 24.5vw;
 	background-repeat: no-repeat;
 	margin-bottom: 7.8125vw;
 }
 
-.name {
-	align-self: flex-start;
-	letter-spacing: 0.08rem;
-	font-size: 5vw;
-	width: 50%;
-	text-align: right;
-	padding-right: 1vw;
-}
 .copy {
 	width: 100%;
 	display: flex;
+	flex-direction: column;
 	flex-wrap: wrap;
 	justify-content: center;
+	align-items: center;
+}
+
+.name {
+	letter-spacing: 0.08rem;
+	font-size: 5vw;
+	text-align: right;
 }
 
 .titles {
-	margin-top: 2vw;
 	letter-spacing: 0.06rem;
-	width: 50%;
-	align-self: flex-end;
 }
 
 .titles p {
-	margin-bottom: 4vw;
+	font-size: 4vw;
+	margin-top: 4vw;
+	text-align: center;
 }
 
 .hidden {
 	display: none;
 }
 
-.nav {
-	display: flex;
-	width: 100%;
-	flex-direction: column;
-}
-
-.navbar {
-	display: flex;
-	flex-direction: column;
-	order: 2;
-	width: 100%;
-}
-
 .specific-pages {
-		display: none;
+	display: none;
 }
 
 .landing-page {
@@ -135,69 +107,329 @@ video {
 	flex-wrap: wrap;
 }
 
+/********* GLOBAL NAVIGATION *********/
+.nav {
+	display: flex;
+	width: 100%;
+}
+
+.navbar {
+	display: flex;
+	width: 100%;
+}
+
+.logo-and-titles {
+	display: flex;
+	flex-wrap: wrap;
+	background-color: rgba(11, 13, 13, 0.8);
+}
+
 .navlink {
 	display: flex;
 	flex-direction: row;
 	width: 100%;
 	background-color: rgba(11, 13, 13, 0.8);
-	padding: 4vw;
-	border-bottom: 2vw solid #084457;
-	justify-content: center;
 }
 
 
-@media screen and (min-width: 600px) {
+/********* LANDING PAGE *********/
+.landing-page  .nav {
+	flex-direction: column;
+	height: 100%;
+}
 
-/********* BACKGROUND AND RESETS *********/
-	
+.landing-page .navbar {
+	flex-direction: column;
+	order: 2;
+}
+
+.landing-page .logo-and-titles {
+	align-items: center;
+	flex-direction: column;
+	padding: 4vw;
+	font-size: 3vw;
+	font-weight: 700;
+	padding-bottom: 8vw;
+}
+
+.landing-page .logo {
+	height: 31.25vw;
+	width: 24.5vw;
+}
+
+.landing-page .navlink {
+	padding: 4vw;
+	border-top: 2vw solid #084457;
+	justify-content: center;
+	margin-top: 1.5vw;
+}
+
+.landing-page .hamburger-container {
+	align-self: flex-end;
+}
+
+/********* SPECIFIC PAGES *********/
+
+.specific-pages {
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+}
+
+.specific-pages .nav {
+	flex-direction: row;
+	width: 100%;
+}
+
+.specific-pages .navbar {
+	display: none;
+}
+
+.specific-pages .logo-and-titles {
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	border-bottom: 2px solid #568491;
+}
+
+.specific-pages .copy {
+	display:none;
+}
+
+.specific-pages .logo {
+	height: 15vw;
+	width: 12vw;
+	margin: 5vw;
+	margin-left: 8vw;
+}
+
+.specific-pages .hamburger-container {
+	margin-right: 4.5vw;
+}
+
+.specific-page-content {
+	display: flex;
+	z-index: 2;
+	flex-direction: column;
+	align-items: center;
+	height: 100vh;
+	background-color: rgba(11, 13, 13, 0.9);
+	justify-content: flex-start;
+	padding: 8vw;
+}
+
+.specific-page-header {
+	display: flex;
+	flex-direction: row;
+	font-size: 8vw;
+}
+
+/********* PORTFOLIO PAGE *********/
+
+.portfolio-navbar {
+	display: none;
+}
+
+.portfolio-navbar-dropdown-container {
+	border: 1.5px solid;
+	margin-top: 4vw;
+	overflow: hidden;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0vw 2vw;
+}
+.portfolio-navbar-dropdown-container,
+.portfolio-navbar-dropdown {
+	height: 12vw;
+	font-size: 6.5vw;
+}
+
+.portfolio-navbar-dropdown {
+	margin-top: 2.5vw;
+}
+
+.portfolio-navbar-dropdown .specific-page-selector {
+	margin-bottom: 2.5vw;
+	padding-right: 8vw;
+}
+
+/*54 when open*/
+
+.fa {
+	position: absolute;
+	margin-left: 48vw;
+	margin-top: -0.8vw;
+}
+
+.portfolio-content {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+.portfolio-item {
+	z-index: 3;
+	margin: 7vw 3.5vw;
+	padding-bottom: 3vw;
+}
+
+.thumbnail {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	height: 65vw;
+	width: 65vw;
+	background-size: cover;
+}
+
+.item-title-nohover {
+	width: 65vw;
+	font-weight: 700;
+	font-size: 8vw;
+	text-align: center;
+	transform: translateY(105%);
+}
+
+.item-title {
+	display: none;
+}
+
+@media screen and (min-width: 700px) {
 	video {
-		transform: none;
-		max-height: 100%;
-		min-width: 100%;
-		margin-left: -105%;
+		width: 210vw;
+		transform: rotate(90deg) translateY(45vw) translateX(-6vw);
 	}
 
 	.hamburger-container {
 		display:none;
 	}
 
-	.logo {
+	.landing-page .logo {
+		height: 20vw;
+    	width: 15vw;
 		margin: 0;
-		transform: none;
+		position: absolute;
+		align-self: flex-start;
 	}
 
-	.hamburger-container {
-		display: none;
+	.landing-page .logo-and-titles {
+		flex-direction: column;
+		flex-wrap: nowrap;
+		align-items: flex-end;
+		padding: 4vw 8vw;
 	}
 
-	.logo-and-titles {
-		background: none;
-		padding: 0;
-		border: none;
-		margin: 0;
+	.landing-page .copy {
+		width: initial;
+		flex-direction: column;
+		flex-wrap: wrap;	
+	}	
+
+	.name {
+		font-size: 3vw;
 	}
 
+	.titles p {
+		font-size: 2.5vw;
+		margin-top: 2vw;
+	}
+
+	.landing-page .navbar {
+		position: absolute;
+		height: 100%;
+		width: 30vw;
+		background-color: rgba(11, 13, 13, 0.8);
+		padding-top: 26vw;
+	}
+
+
+	.landing-page .navlink {
+		border-top: 0.5vw solid #084457;
+		margin-top: 3vw;
+		padding-top: 4vw;
+	}
+
+}
+
+@media screen and (min-width: 930px) {
+
+	video {
+		transform: translateY(0vw);
+		max-height: 100%;
+		min-width: 100%;
+		margin-left: -50%;
+	}
 
 /********* LANDING PAGE *********/
 
+	.landing-page {
+		z-index: 2;
+		display: flex;
+	}
 
+	.landing-page .nav {
+		height: 100vh;
+		width: 100vw;
+		z-index: 3;
+		flex-direction: row;
+		justify-content: space-between;
+		background: linear-gradient(to left, rgba(9,12,13,1) 
+			0%, rgba(9, 12, 13, 0.2) 
+			50%, rgba(9, 12, 13, 0.1) 
+			80%, rgba(9, 12, 13, 0) 
+			100%, rgba(9, 12, 13, 0));
+	}
+
+	.landing-page .navbar {
+		z-index: 4;
+		position: static;
+		width: initial;
+		background: none;
+		padding: 0;
+		flex-direction: row;
+	}
+
+	.landing-page .navlink {
+		background: none;
+		border: none;
+		margin: 3vw;
+		padding: 0;
+		justify-content: space-between;
+		font-size: 2vw;
+	}
 
 	.landing-page .logo-and-titles {
+		background: none;
 		align-self: flex-end;
+		flex-direction: row;
+		flex-wrap: wrap;
+		padding: 0;
 		padding-left: 7vw;
-		padding-bottom: 4vw;
+    	padding-bottom: 4vw;
+    	align-items: center;
+    	font-size: initial;
+    	font-weight: initial;
 	}
 
 	.landing-page .logo {
+		position: initial;
 		height: 15.625vw;
-		width: 12.5vw;
-		align-self: flex-start;
-	}	
+    	width: 12.5vw;
+    	align-self: flex-start;
+	}
+	
+	.landing-page .copy {
 
-	.landing-page .name, .titles {
+	}
+
+	.landing-page .name {
 		font-size: 1.388888889vw;
-		width: initial;
-		margin: 0;
+    	width: initial;
+    	margin: 0;
+    	align-self: flex-start;
+    	padding-right: 1vw;
 	}
 
 	.landing-page .titles {
@@ -205,49 +437,26 @@ video {
 	}
 
 	.landing-page .titles p {
-		margin-bottom: 0;
-		margin-top: 1vw;
-	}
-	
-	.landing-page .copy {
-		display: flex;
-		flex-direction: column;
-		align-self: flex-end;
-		transform: translate(-25%);
-		margin-bottom: 0.5vw;
+		font-size: 1.388888889vw;
 	}
 
-	 .landing-page .nav {
-	 	z-index: 2;
-		flex-direction: row-reverse;
-		justify-content: space-between;
-		height: 100%;
-		background: linear-gradient(to left, rgba(9,12,13,1) 
-			0%, rgba(9, 12, 13, 0.2)
-			50%, rgba(9, 12, 13, 0.1)
-			80%, rgba(9, 12, 13, 0)
-			100%, rgba(9, 12, 13, 0));
-	}
+/********* SPECIFIC PAGES *********/
 
-	.landing-page .navbar {
-		display: flex;
-		height: 100%;
-		text-align: center;
-		font-size: 2vw;
-	}
-
-	.landing-page .navlink {
-		justify-content: space-between;
-		width: 10vw;
-		margin: 3vw;
-	}
-	
-	
-/********* INDIVIDUAL PAGES *********/
-	
 	.specific-pages {
+		/*display: flex;*/
 		flex-direction: row;
 		justify-content: flex-start;
+	}
+
+	.specific-pages .navbar {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.specific-pages .logo-and-titles {
+		background: none;
+		border: none;
+		flex-direction: column;
 	}
 
 	.specific-pages .logo {
@@ -257,17 +466,20 @@ video {
 	}
 
 	.specific-pages .nav {
-		flex-direction: column-reverse;
-		justify-content: flex-end;
-		align-items: center;
 		height: 100%;
 		width: 12.5vw;
+		display: flex;	
+		flex-direction: column-reverse;
+		justify-content: flex-end;
 	}
 
 	.specific-pages .navlink {
+		background: none;
 		margin-bottom: 2.5vw;
+		justify-content: flex-start;
+		margin-left: 3vw;
 	}
-
+	
 	.specific-page-content {
 		display: flex;
 		z-index: 3;
@@ -276,6 +488,7 @@ video {
 		height: 100vh;
 		width: 87.5vw;
 		background-color: rgba(11, 13, 13, 0.8);
+		padding: 0;
 	}
 
 	.specific-page-header {
@@ -283,6 +496,12 @@ video {
 		flex-direction: row;
 		font-size: 3.5vw;
 		margin-top: 5vw;
+	}
+	
+/********* PORTFOLIO *********/
+
+	.portfolio-navbar-dropdown-container {
+		display: none;
 	}
 
 	.portfolio-navbar {
@@ -297,27 +516,26 @@ video {
 	}
 
 	.specific-content {
-		z-index: 10;
-		height: 100%;
 		width: 87.5vw;
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
 		align-content: flex-start;
 		padding: 0vw;
 	}
 	
 	.portfolio-content {
+		flex-wrap: wrap;
 		overflow: scroll;
 		width: 70vw;
+		justify-content: center;
+		flex-direction: row;
 	}
 
-	.portfolio-content::-webkit-scrollbar {
+	.specific-content::-webkit-scrollbar {
 		display: none;
 	}
 
 	.portfolio-item {
-		z-index: 10;
+		display: initial;
 		margin: 2vw 2vw;
 		padding-bottom: 3vw;
 	}
@@ -332,7 +550,12 @@ video {
 		filter: grayscale(85%);
 	}
 
+	.item-title-nohover {
+		display: none;
+	}
+
 	.item-title {
+		display: inherit;
 		position: absolute;
 		width: 25vw;
 		font-weight: 700;

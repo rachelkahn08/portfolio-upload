@@ -42,8 +42,13 @@ function populateImages() {
 			thumbImg.classList.add("thumbnail");
 			thumbImg.style.backgroundImage = portfolioContents[i].thumbUrl;
 
+		var itemTitle = document.createElement("div");
+			itemTitle.classList.add("item-title-nohover");
+			itemTitle.innerHTML = portfolioContents[i].title;
+
 		var portfolioItem = document.createElement("div");
 			portfolioItem.classList.add("portfolio-item");
+			thumbImg.appendChild(itemTitle);
 			portfolioItem.appendChild(thumbImg);
 			portfolioItem.setAttribute("data-name", portfolioContents[i].name);
 			portfolioItem.setAttribute("data-title", portfolioContents[i].title);
@@ -51,6 +56,7 @@ function populateImages() {
 			portfolioItem.setAttribute("data-thumbUrl", portfolioContents[i].thumbUrl);
 			portfolioItem.addEventListener("mouseover", thumbHoverOn);
 			portfolioItem.addEventListener("mouseout", thumbHoverOff);
+
 		portfolioContainer.appendChild(portfolioItem);
 		
 	}
