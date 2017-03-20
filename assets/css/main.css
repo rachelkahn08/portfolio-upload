@@ -48,10 +48,6 @@ video {
 	z-index: 2;
 }
 
-.nav {
-	display: none;
-}
-
 .logo-and-titles {
 	display: flex;
 	align-items: center;
@@ -60,6 +56,7 @@ video {
 	background-color: rgba(11, 13, 13, 0.8);
 	padding: 4vw;
 	border-bottom: 2vw solid #084457;
+	font-size: 3vw;
 }
 
 .hamburger-container {
@@ -92,10 +89,15 @@ video {
 	text-align: right;
 	padding-right: 1vw;
 }
+.copy {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
 
 .titles {
-	margin-top: 4vw;
-	font-size: 4vw;
+	margin-top: 2vw;
 	letter-spacing: 0.06rem;
 	width: 50%;
 	align-self: flex-end;
@@ -107,6 +109,40 @@ video {
 
 .hidden {
 	display: none;
+}
+
+.nav {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+}
+
+.navbar {
+	display: flex;
+	flex-direction: column;
+	order: 2;
+	width: 100%;
+}
+
+.specific-pages {
+		display: none;
+}
+
+.landing-page {
+	height: 100%;
+	width: 100%;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.navlink {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	background-color: rgba(11, 13, 13, 0.8);
+	padding: 4vw;
+	border-bottom: 2vw solid #084457;
+	justify-content: center;
 }
 
 
@@ -125,23 +161,13 @@ video {
 		display:none;
 	}
 
-	.nav {
-		display: flex;
-	}
-
 	.logo {
 		margin: 0;
 		transform: none;
 	}
 
-	.landing-page .hamburger-container,
-	.specific-pages .copy,
-	.specific-pages {
+	.hamburger-container {
 		display: none;
-	}
-
-	.landing-page{
-		display: flex;
 	}
 
 	.logo-and-titles {
@@ -151,25 +177,13 @@ video {
 		margin: 0;
 	}
 
-	.navlink {
-		display: flex;
-		flex-direction: row;
-	}
-
 
 /********* LANDING PAGE *********/
 
-	.landing-page {
-		height: 100%;
-		width: 100%;
-		flex-direction: column;
-		flex-wrap: wrap;
-	}
+
 
 	.landing-page .logo-and-titles {
 		align-self: flex-end;
-		flex-direction: row;
-		flex-wrap: wrap;
 		padding-left: 7vw;
 		padding-bottom: 4vw;
 	}
