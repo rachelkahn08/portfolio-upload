@@ -301,6 +301,47 @@ a {
 	display: none;
 }
 
+/********* TIDE *********/
+
+.tide-content {
+	margin-top: 5vw;
+	overflow-y: scroll;
+	display: flex;
+	flex-direction: column-reverse;
+	height: 100%;
+}
+
+.tide-project-item {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+}
+
+.tide-project-item figure {
+	flex: 1 25vw;
+	height: 25vw;
+	width: 25vw;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center top;
+	overflow: hidden;
+}
+
+.tide-project-highlighted-item {
+	order: 1;
+	height: 50vw;
+	width: 50vw;
+}
+
+.tide-item-description {
+	width: 100%;
+}
+
+.tide-content::-webkit-scrollbar {
+		display: none;
+	}
+
 @media screen and (min-width: 700px) {
 	video {
 		width: 210vw;

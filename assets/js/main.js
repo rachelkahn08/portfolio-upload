@@ -137,16 +137,59 @@ function addPortfolioButtonListeners() {
 
 var tideItems = [
 	{
-		imgURL: "url(assets/img/tide-landing.mobile.png",
+		imgURL: "url(assets/img/tide-landing-mobile.png",
 		screenSize: "mobile",
 		compCategory: "Landing Page",
-		categoryID: "landing"
+		categoryID: "landing",
 	},
-	// {
-	// 	imgURL: "url(assets/img/.png",
-	// 	screenSize: "",
-	// 	compCategory: "",
-	// },
+	{
+		imgURL: "url(assets/img/tide-browse-products-mobile.png",
+		screenSize: "mobile",
+		compCategory: "Browse Products",
+		categoryID: "browse",
+	},
+	{
+		imgURL: "url(assets/img/tide-individual-product-mobile.png",
+		screenSize: "mobile",
+		compCategory: "Product Detail",
+		categoryID: "product",
+	},
+	{
+		imgURL: "url(assets/img/tide-landing-tablet.png",
+		screenSize: "tablet",
+		compCategory: "Landing Page",
+		categoryID: "landing",
+	},
+	{
+		imgURL: "url(assets/img/tide-browse-products-tablet.png",
+		screenSize: "tablet",
+		compCategory: "Browse Products",
+		categoryID: "browse",
+	},
+	{
+		imgURL: "url(assets/img/tide-individual-product-tablet.png",
+		screenSize: "tablet",
+		compCategory: "Product Detail",
+		categoryID: "product",
+	},
+	{
+		imgURL: "url(assets/img/tide-landing-desktop.png",
+		screenSize: "desktop",
+		compCategory: "Landing Page",
+		categoryID: "landing",
+	},
+	{
+		imgURL: "url(assets/img/tide-browse-products-desktop.png",
+		screenSize: "desktop",
+		compCategory: "Browse Products",
+		categoryID: "browse",
+	},
+	{
+		imgURL: "url(assets/img/tide-individual-product-tablet.png",
+		screenSize: "tablet",
+		compCategory: "Product Detail",
+		categoryID: "product",
+	},	
 ];
 
 
@@ -163,12 +206,50 @@ function openTideItemDetails(e) {
 		projectHeader.innerHTML = e.currentTarget.dataset.title + "(&ensp;);";
 
 	var projectPage = document.createElement("div");
+		projectPage.classList.add("specific-content");
+		projectPage.classList.add("tide-content");
+
+
+		var highlightedSize = document.createElement("div");
+			highlightedSize.classList.add("item-size");
+
+		var highlightedCategory = document.createElement("div");
+			highlightedCategory.classList.add("item-category");
+
+		var highlightedDescription = document.createElement("div");
+			highlightedDescription.classList.add("tide-item-description");
+			highlightedDescription.appendChild(highlightedCategory);
+			highlightedDescription.appendChild(highlightedSize);
+
+		var highlightedImage = document.createElement("figure");
+			highlightedImage.classList.add("tide-item-image")
+			highlightedImage.appendChild(highlightedCategory);
+
+	var randomStartingItem = tideItems[(Math.ceil(Math.random() * tideItems.length)) -1] ;
+
+	var highlightedContainer = document.createElement("div");
+		highlightedContainer.appendChild(highlightedImage);
+		highlightedContainer.classList.add("tide-project-item");
+		highlightedContainer.classList.add("tide-project-highlighted-item");
+		highlightedContainer.setAttribute("data-imgURL", randomStartingItem.imgURL);
+		highlightedContainer.setAttribute("data-screen-size", randomStartingItem.screenSize);
+		highlightedContainer.setAttribute("data-comp-category", randomStartingItem.compCategory);
+
+	projectPage.appendChild(highlightedContainer);
+
+	// tideItems.splice(randomStartingItem, 1);
+
+	console.log(randomStartingItem);
+	console.log(tideItems);
+
+	portfolioContent.parentNode.appendChild(projectPage);
 
 	for (var i = tideItems.length - 1; i >= 0; i--) {		
 
 		var itemImage = document.createElement("figure");
-			itemImage.backgroundImage = tideItems[i].imgURL;
-			itemImage.classList.add(tideItems[i].screenSize)
+			itemImage.style.backgroundImage = tideItems[i].imgURL;
+			itemImage.classList.add("tide-item-image");
+			itemImage.classList.add(tideItems[i].screenSize);
 
 		var itemSize = document.createElement("div");
 			itemSize.classList.add("item-description");
@@ -178,23 +259,31 @@ function openTideItemDetails(e) {
 			itemCategory.classList.add("item-description");
 			itemCategory.innerHTML = tideItems[i].compCategory;
 
+		var itemDescription = document.createElement("div");
+			itemDescription.classList.add("tide-item-description");
+			itemDescription.appendChild(itemCategory);
+			itemDescription.appendChild(itemSize);
+
 		var projectItem = document.createElement("div");
-			projectItem.classList.add("project-item");
+			projectItem.classList.add("tide-project-item");
 			projectItem.appendChild(itemImage);
-			projectItem.appendChild(itemSize);
-			projectItem.appendChild(itemCategory);
+			projectItem.appendChild(itemDescription);
 			projectItem.setAttribute("data-imgURL", tideItems[i].imgURL);
 			projectItem.setAttribute("data-screen-size", tideItems[i].screenSize);
 			projectItem.setAttribute("data-comp-category", tideItems[i].compCategory);
-			
-	}
-	
+			projectItem.addEventListener("click", highlightItem);
+
+		projectPage.appendChild(projectItem);		
+	}	
 }	
 
+function highlightItem(e) {
+	var currentItem = document.querySelector(".tide-project-highlighted-item");
+		currentItem.classList.remove("tide-project-highlighted-item");
+	e.currentTarget.classList.add("tide-project-highlighted-item");
+}
+
 window.addEventListener("load", setLoadListeners);
-
-
-
 
 
 
